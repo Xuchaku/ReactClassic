@@ -1,0 +1,25 @@
+.GreenButton {
+  outline: none;
+  background: none;
+  color: #009933;
+  padding: 15px 50px;
+  border: 1px solid #7fd900;
+
+  text-align: center;
+  margin: 0 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.GreenButton:hover {
+  color: red;
+  text-shadow: 0px 0px 8px rgba(255, 0, 0, 1);
+  box-shadow: -1px 0px 8px 0px #7fd900 inset;
+}
+.GreenButton a {
+  text-decoration: none;
+  color: #009933;
+}
+.GreenButton a:hover {
+  color: red;
+  text-shadow: 0px 0px 8px rgba(255, 0, 0, 1);
+}

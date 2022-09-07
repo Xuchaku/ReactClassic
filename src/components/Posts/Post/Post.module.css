@@ -1,0 +1,36 @@
+.postWrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  border-left: 4px double #7fd900;
+  box-shadow: 0px 0px 3px 0px #009933;
+  color: #009933;
+  width: 800px;
+  margin-bottom: 15px;
+}
+.informationWrapper {
+  padding: 30px 15px;
+}
+.informationWrapper span {
+  color: rgba(255, 0, 0, 0.9);
+}
+.buttonWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.my-node-enter {
+  margin-left: 0;
+}
+.my-node-enter-active {
+  margin-left: 300px;
+  transition: margin-left 10000ms;
+}
+.my-node-exit {
+  margin-left: 300px;
+}
+.my-node-exit-active {
+  margin-left: 0;
+  transition: margin-left 10000ms;
+}

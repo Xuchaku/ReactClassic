@@ -1,0 +1,17 @@
+.Pagination {
+  display: flex;
+
+  flex-direction: row;
+  margin: 20px 0;
+  padding: 5px 10px;
+}
+.Pagination p {
+  border: 1px solid red;
+  padding: 5px 10px;
+  cursor: pointer;
+  color: #7fd900;
+  transition: 0.3s;
+}
+.Selected {
+  box-shadow: 0px -1px 8px 0px red inset;
+}

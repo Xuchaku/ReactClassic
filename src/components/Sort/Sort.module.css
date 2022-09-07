@@ -1,0 +1,16 @@
+.Sort {
+  display: flex;
+  border-bottom: 4px double red;
+  width: 800px;
+  margin: 50px 0;
+  padding-bottom: 20px;
+  flex-direction: column;
+}
+.Sort label {
+  color: red;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.Sort select {
+  width: 150px;
+}

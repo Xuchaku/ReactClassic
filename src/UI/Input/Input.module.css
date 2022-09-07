@@ -1,0 +1,16 @@
+.GreenInput {
+  outline: none;
+  background: none;
+  color: red;
+  padding: 10px 15px;
+  border: 1px solid #7fd900;
+  text-align: left;
+  margin: 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.GreenInput:hover {
+  color: red;
+  text-shadow: 0px 0px 8px rgba(255, 0, 0, 1);
+  box-shadow: -1px 0px 8px 0px #7fd900 inset;
+}

@@ -1,0 +1,26 @@
+.Error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.Error p {
+  color: red;
+  font-size: 26px;
+  font-weight: bold;
+}
+.Error span {
+  width: 20px;
+  background-color: red;
+  margin-left: 10px;
+  height: 30px;
+  animation: consol 0.5s infinite ease-in-out alternate;
+}
+@keyframes consol {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

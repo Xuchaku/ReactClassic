@@ -1,0 +1,14 @@
+.Select {
+  background: none;
+  outline: none;
+  padding: 10px 5px;
+  font-size: 16px;
+  border: 1px solid #7fd900;
+  color: #7fd900;
+}
+.Select option {
+  display: flex;
+  padding: 10px 5px;
+  background-color: black;
+  color: #7fd900;
+}

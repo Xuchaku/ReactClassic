@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { Route, Routes } from "react-router-dom";
+import { useState } from "react";
+import "./App.css";
+import About from "./Pages/About";
+import Main from "./Pages/Main";
+import Login from "./Pages/Login";
+import Error from "./Pages/Error";
+import Navigation from "./components/Navigation/Navigation";
+import PostId from "./Pages/PostId";
+import { Auth } from "./context/Auth";
 function App() {
+  const links = [
+    { path: "/main", text: "Main" },
+    { path: "/about", text: "About" },
+    { path: "/login", text: "Login" },
+  ];
+  const [isAuth, setIsAuth] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Auth.Provider value={{ isAuth, setIsAuth }}>
+      <Navigation links={links}></Navigation>
+      <Routes>
+        <Route path="/" element={<Main />}></Route>
+        <Route path="/about" element={<About />}></Route>
+        <Route path="/main" element={<Main />}></Route>
+        <Route path="/main/:id" element={<PostId />}></Route>
+        <Route path="/login" element={<Login />}></Route>
+        <Route path="*" element={<Error />}></Route>
+      </Routes>
+    </Auth.Provider>
   );
 }
-
 export default App;

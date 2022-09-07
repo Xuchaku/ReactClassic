@@ -1,0 +1,11 @@
+.WrapperPost {
+  display: flex;
+}
+.Form {
+  box-shadow: 0px 0px 3px 0px #009933;
+  margin: 20px auto;
+  padding: 15px 20px;
+}
+.Form button {
+  margin: 0;
+}

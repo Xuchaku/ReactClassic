@@ -1,0 +1,10 @@
+.Search {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  margin-bottom: 20px;
+}
+.Search label {
+  color: red;
+  font-weight: bold;
+}
