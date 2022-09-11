@@ -19,7 +19,7 @@ function Post(props) {
       <div className={classes.buttonWrapper}>
         <Button onClick={deletePostHandler}>Delete</Button>
         <Button>
-          <Link to={"./" + id}>Change</Link>
+          <Link to={"./main/" + id}>Change</Link>
         </Button>
       </div>
     </div>

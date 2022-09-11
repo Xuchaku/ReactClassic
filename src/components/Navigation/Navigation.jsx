@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, Outlet, useLocation } from "react-router-dom";
 import { useContext } from "react";
 import { DoorOpenFill } from "react-bootstrap-icons";
 import classes from "./Navigation.module.css";
@@ -19,23 +19,26 @@ export default function Navigation({ links }) {
   }
 
   return (
-    <div className={classes.Navigation}>
-      {links.map((link, index) => {
-        return (
-          <NavLink
-            style={({ isActive }) => (isActive ? activeStyle : undefined)}
-            key={index}
-            to={link.path}
-          >
-            {link.text}
+    <>
+      <div className={classes.Navigation}>
+        {links.map((link, index) => {
+          return (
+            <NavLink
+              style={({ isActive }) => (isActive ? activeStyle : undefined)}
+              key={index}
+              to={link.path}
+            >
+              {link.text}
+            </NavLink>
+          );
+        })}
+        {isAuth && (
+          <NavLink to={location.pathname} onClick={handlerAuthOut}>
+            <DoorOpenFill color="red" size={24} />
           </NavLink>
-        );
-      })}
-      {isAuth && (
-        <NavLink to={location.pathname} onClick={handlerAuthOut}>
-          <DoorOpenFill color="red" size={24} />
-        </NavLink>
-      )}
-    </div>
+        )}
+      </div>
+      <Outlet></Outlet>
+    </>
   );
 }
