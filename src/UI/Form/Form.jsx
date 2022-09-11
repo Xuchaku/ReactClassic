@@ -18,18 +18,7 @@ function Form({ posts, create, show }) {
   }
   return (
     <form className={classes.Form} onSubmit={(event) => event.preventDefault()}>
-      <Button
-        onClick={show}
-        style={{
-          width: 25,
-          height: 25,
-          padding: 0,
-          position: "absolute",
-          right: 0,
-          top: 0,
-          margin: "5px 10px",
-        }}
-      >
+      <Button onClick={show} isExitStyle={true}>
         X
       </Button>
       <div className={classes.wrapperInForm}>

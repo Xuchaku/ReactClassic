@@ -8,6 +8,7 @@ import Error from "./Pages/Error";
 import Navigation from "./components/Navigation/Navigation";
 import PostId from "./Pages/PostId";
 import { Auth } from "./context/Auth";
+
 function App() {
   const links = [
     { path: "/main", text: "Main" },

@@ -1,7 +1,7 @@
-import { useEffect } from "react";
+import { useId } from "react";
 import classes from "./Select.module.css";
 function Select({ value, options, title, sort }) {
-  const uniqId = Math.random() + "__Select";
+  const uniqId = useId();
   function onChangeHandler(e) {
     sort(e.target.value);
   }

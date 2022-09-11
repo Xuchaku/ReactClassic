@@ -23,3 +23,12 @@
   width: 150px;
   margin-left: 0;
 }
+.Form > button:first-child {
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 5px 10px;
+}

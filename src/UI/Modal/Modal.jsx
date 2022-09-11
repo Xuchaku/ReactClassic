@@ -11,7 +11,7 @@ const Modal = memo(function Modal({ posts, create }) {
   return (
     <>
       <Button onClick={showModalHandler.bind(null, true)}>Create Post</Button>
-      {modal ? (
+      {modal && (
         <div className={classes.ModalBackground}>
           <Form
             show={showModalHandler.bind(null, false)}
@@ -19,7 +19,7 @@ const Modal = memo(function Modal({ posts, create }) {
             create={create}
           ></Form>
         </div>
-      ) : null}
+      )}
     </>
   );
 });
