@@ -9,8 +9,8 @@ import { TOTAL_PAGE_COUNT, TOTAL_ITEMS_ON_PAGE } from "../consts/Consts";
 import Filter from "./../components/Filter/Filter";
 import ".././App.css";
 import Posts from ".././components/Posts/Posts";
-function Main() {
-  const [posts, setPosts] = useState(data);
+function Main({ posts, setPosts }) {
+  //const [posts, setPosts] = useState(data);
   const [filter, setFilter] = useState({ sort: "", query: "" });
   const [selectedPage, setSelectedPage] = useState(1);
   const [numbers, setNumbers] = useState([]);
@@ -20,6 +20,14 @@ function Main() {
   const addPostHandler = useCallback(function addPostHandler(post) {
     setPosts([...posts, post]);
   }, []);
+  const changePostHandler = (id, content) => {
+    const changedPosts = [...posts];
+    const postId = changedPosts.findIndex((post) => {
+      return post.id == id;
+    });
+    changedPosts[postId].text = content;
+    setPosts(changedPosts);
+  };
 
   useEffect(() => {
     fetchPosts(TOTAL_ITEMS_ON_PAGE, selectedPage);
@@ -36,7 +44,6 @@ function Main() {
   }
 
   function deletePostHandler(post) {
-    console.log(posts);
     const changedPosts = posts.filter((currentPost) => {
       return post.id !== currentPost.id;
     });
