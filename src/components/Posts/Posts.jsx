@@ -2,13 +2,13 @@ import React from "react";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import Post from "./Post/Post";
 import classes from "./Posts.module.css";
-const Posts = function Posts({ posts, remove }) {
+const Posts = function Posts({ posts }) {
   return posts.length > 0 ? (
     <TransitionGroup>
       {posts.map((post) => {
         return (
           <CSSTransition key={post.id} timeout={500} classNames="item">
-            <Post key={post.id} remove={remove} post={post}></Post>
+            <Post key={post.id} post={post}></Post>
           </CSSTransition>
         );
       })}

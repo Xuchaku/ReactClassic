@@ -1,12 +1,16 @@
 import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { deletePostHandler } from "../../../store/reducers/postsSlice";
 import { Link } from "react-router-dom";
 import classes from "./Post.module.css";
 import Button from "../../../UI/Button/Button";
 
 function Post(props) {
   const { id, title, description } = props.post;
-  function deletePostHandler() {
-    props.remove(props.post);
+  const dispatch = useDispatch();
+  function deletePost() {
+    //props.remove(props.post);
+    dispatch(deletePostHandler({ id }));
   }
   return (
     <div className={classes.postWrapper}>
@@ -17,7 +21,7 @@ function Post(props) {
         <p>{description}</p>
       </div>
       <div className={classes.buttonWrapper}>
-        <Button onClick={deletePostHandler}>Delete</Button>
+        <Button onClick={deletePost}>Delete</Button>
         <Button>
           <Link to={"./" + id}>Change</Link>
         </Button>

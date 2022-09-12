@@ -1,14 +1,17 @@
 import classes from "./Form.module.css";
 import Button from "../Button/Button";
+import { useSelector, useDispatch } from "react-redux";
 import Input from "../Input/Input";
 import { useState } from "react";
+import { addPostHandler } from "../../store/reducers/postsSlice";
 
-function Form({ posts, create, show }) {
+function Form({ show }) {
   const [dataForm, setDataForm] = useState({ title: "", description: "" });
+  const posts = useSelector((state) => state.posts.posts);
+  const dispatch = useDispatch();
   const addNewPostHandler = (e) => {
     let { title, description } = dataForm;
-    create({ title, description, id: posts.length + 1 });
-    console.log({ title, description });
+    dispatch(addPostHandler({ title, description, id: posts.length + 1 }));
   };
   function dataFormHandler(field) {
     return function (value) {
