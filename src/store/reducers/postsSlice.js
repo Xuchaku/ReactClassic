@@ -30,7 +30,7 @@ const postsSlice = createSlice({
       state.posts = changedPosts;
     },
     setPosts(state, action) {
-      state.posts = [...state.posts, ...action.payload];
+      state.posts = [...action.payload];
     },
   },
 });

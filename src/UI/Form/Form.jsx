@@ -11,7 +11,13 @@ function Form({ show }) {
   const dispatch = useDispatch();
   const addNewPostHandler = (e) => {
     let { title, description } = dataForm;
-    dispatch(addPostHandler({ title, description, id: posts.length + 1 }));
+    dispatch(
+      addPostHandler({
+        title,
+        description,
+        id: posts[posts.length - 1].id + 1,
+      })
+    );
   };
   function dataFormHandler(field) {
     return function (value) {

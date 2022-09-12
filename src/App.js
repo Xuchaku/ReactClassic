@@ -28,6 +28,7 @@ function App() {
   useEffect(() => {
     navigate("./main");
   }, []);
+
   return (
     <Auth.Provider value={{ isAuth, setIsAuth }}>
       <Routes>

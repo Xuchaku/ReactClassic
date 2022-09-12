@@ -23,11 +23,6 @@ function Main({ posts }) {
     setNumbers(pagesArr(TOTAL_PAGE_COUNT));
   }, [selectedPage]);
 
-  // useEffect(() => {
-  //   dispatch(fetchPosts(1));
-
-  // }, []);
-
   return (
     <div className="App">
       <Filter filter={filter} setFilter={setFilter}></Filter>
