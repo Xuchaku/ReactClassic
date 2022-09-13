@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Modal from ".././UI/Modal/Modal";
 import { fetchPosts } from "../store/reducers/postsSlice";
 import { useSearched } from ".././hooks/useSearched/useSearched";
@@ -10,8 +10,9 @@ import Filter from "./../components/Filter/Filter";
 import ".././App.css";
 import Posts from ".././components/Posts/Posts";
 
-function Main({ posts }) {
+function Main() {
   const dispatch = useDispatch();
+  const posts = useSelector((state) => state.posts.posts);
   const [filter, setFilter] = useState({ sort: "", query: "" });
   const [selectedPage, setSelectedPage] = useState(1);
   const [numbers, setNumbers] = useState([]);

@@ -26,7 +26,7 @@ const postsSlice = createSlice({
       const postId = changedPosts.findIndex((post) => {
         return post.id == action.payload.id;
       });
-      changedPosts[postId].text = action.payload.content;
+      changedPosts[postId].description = action.payload.content;
       state.posts = changedPosts;
     },
     setPosts(state, action) {
@@ -46,6 +46,6 @@ export default postsSlice.reducer;
 export const {
   deletePostHandler,
   addPostHandler,
-  changePostHandlerk,
+  changePostHandler,
   setPosts,
 } = postsSlice.actions;

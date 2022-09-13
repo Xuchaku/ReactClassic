@@ -14,7 +14,6 @@ import { Auth } from "./context/Auth";
 
 function App() {
   const navigate = useNavigate();
-
   const posts = useSelector((state) => state.posts.posts);
 
   console.log(posts);
@@ -34,7 +33,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Navigation links={links} />}>
           <Route path="/about" element={<About />}></Route>
-          <Route path="/main" element={<Main posts={posts} />}></Route>
+          <Route path="/main" element={<Main />}></Route>
           <Route path="/main/:id" element={<PostId />}></Route>
           <Route path="/login" element={<Login />}></Route>
         </Route>
