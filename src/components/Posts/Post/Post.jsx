@@ -1,7 +1,7 @@
 import React from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { deletePostHandler } from "../../../store/reducers/postsSlice";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { deletePostHandler } from "../../../store/reducers/postsSlice";
 import classes from "./Post.module.css";
 import Button from "../../../UI/Button/Button";
 

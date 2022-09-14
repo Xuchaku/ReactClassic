@@ -1,8 +1,8 @@
+import { useSelector, useDispatch } from "react-redux";
+import { useState } from "react";
 import classes from "./Form.module.css";
 import Button from "../Button/Button";
-import { useSelector, useDispatch } from "react-redux";
 import Input from "../Input/Input";
-import { useState } from "react";
 import { addPostHandler } from "../../store/reducers/postsSlice";
 
 function Form({ show }) {

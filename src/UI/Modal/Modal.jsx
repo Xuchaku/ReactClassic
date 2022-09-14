@@ -1,8 +1,9 @@
+import { useState } from "react";
+import { memo } from "react";
 import Form from "../Form/Form";
 import classes from "./Modal.module.css";
-import { useState } from "react";
 import Button from "../Button/Button";
-import { memo } from "react";
+
 const Modal = memo(function Modal() {
   const [modal, setModal] = useState(false);
   function showModalHandler(value) {
